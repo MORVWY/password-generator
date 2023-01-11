@@ -1,0 +1,59 @@
+.passwords-icons {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .delete-all,
+    .delete-picked {
+        opacity: .5;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        transition: .5s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .delete-all {
+        margin-left: 5px;
+    }
+}
+
+.delete-item, .copy, .save {
+    opacity: .3;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:last-child {
+        margin-left: 5px;
+    }
+}
+
+.delete-item, .copy, .save, .delete-all, .delete-picked {
+    position: relative;
+
+    &:active {
+        top: 2px;
+    }
+    
+    &:before {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        line-height: 3;
+        font-size: 140%;
+        width: 60px;
+    }
+}

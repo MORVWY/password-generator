@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__logo text-in">Password generator</h1>
+    </header>
+
+    <main class="cards">
+
+        <section class="generator box-enterance">
+
+            <h2 class="generator__header headers-enterance">Generate</h2>
+
+            <div class="generator-password item-enterance">
+                <div class="generator-password__item">click generate</div>
+                <img class="copy" src="icons/copy.svg" alt="copy icon" title="Copy password">
+                <img class="save" src="icons/save.svg" alt="save icon" title="Save password">
+            </div>
+
+            <div class="generator-length item-enterance" data-min="4" data-max="16">
+                <div class="generator-length__title">length: <span></span></div>
+                <input class="generator-length__slider" type="range" id="slider" min="4" max="16" value="10">
+            </div>
+
+            <div class="generator-settings item-enterance">
+
+                <span class="generator-settings__title">settings</span>
+
+                <div class="generator-settings__uppercase settings">
+                    <div>Include Uppercase</div>
+                    <input type="checkbox" id="uppercase">
+                    <div class="toggle">
+                        <label for="uppercase" class="toggle__item uppercase"></label>
+                    </div>
+                </div>
+
+                <div class="generator-settings__lowercase settings">
+                    <div>Include Lowercase</div>
+                    <input type="checkbox" id="lowercase">
+                    <div class="toggle">
+                        <label for="lowercase" class="toggle__item lowercase"></label>
+                    </div>
+                </div>
+
+                <div class="generator-settings__numbers settings">
+                    <div>Include Numbers</div>
+                    <input type="checkbox" id="number">
+                    <div class="toggle">
+                        <label for="number" class="toggle__item number"></label>
+                    </div>
+                </div>
+
+                <div class="generator-settings__symbols settings">
+                    <div>Include Symbols</div>
+                    <input type="checkbox" id="symbol">
+                    <div class="toggle">
+                        <label for="symbol" class="toggle__item symbol"></label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="generator-level item-enterance">
+                <div class="generator-level__line"></div>
+                <div class="generator-level__status headers-enterance">Status: <span>strong</span></div>
+            </div>
+
+            <button class="generator__button item-enterance" id="generate"><span>Generate Password</span></button>
+
+        </section>
+
+        <section class="passwords box-enterance">
+            <h2 class="passwords__header headers-enterance">Password history</h2>
+
+            <div class="passwords-icons">
+                <img class="delete-picked icons-enterance" src="icons/delete/delete-picked.svg" alt="delete icon"
+                    title="Delete picked">
+                <img class="delete-all icons-enterance" src="icons/delete/delete-all.svg" alt="delete icon"
+                    title="Delete all">
+            </div>
+
+
+            <div class="passwords__recent item-enterance">
+                <label>
+                    <input type="checkbox" class="passwords__recent-checkbox">
+                    <div><span></span></div>
+                </label>
+
+                <div class="passwords__recent-item">Password examplePassword example</div>
+
+                <div class="passwords__recent-icons">
+                    <img class="copy" src="icons/copy.svg" alt="copy icon" title="Copy password">
+                    <img class="delete-item" src="icons/delete/delete-item.svg" alt="delete icon"
+                        title="Delete password">
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

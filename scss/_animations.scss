@@ -1,0 +1,184 @@
+.text-in {
+    -webkit-animation: text-in 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: text-in 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes text-in {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px);
+        transform: translateZ(400px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes text-in {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px);
+        transform: translateZ(400px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+.box-enterance {
+    -webkit-animation: box-enterance 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: box-enterance 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes box-enterance {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes box-enterance {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.headers-enterance {
+    -webkit-animation: headers-enterance 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.3s both;
+    animation: headers-enterance 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.3s both;
+}
+
+@-webkit-keyframes headers-enterance {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-700px);
+        transform: translateZ(-700px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes headers-enterance {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-700px);
+        transform: translateZ(-700px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+.item-enterance {
+    -webkit-animation: item-enterance 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s both;
+    animation: item-enterance 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s both;
+}
+
+@-webkit-keyframes item-enterance {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-transform-origin: 0% 50%;
+        transform-origin: 0% 50%;
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: 0% 50%;
+        transform-origin: 0% 50%;
+        opacity: 1;
+    }
+}
+
+@keyframes item-enterance {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-transform-origin: 0% 50%;
+        transform-origin: 0% 50%;
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: 0% 50%;
+        transform-origin: 0% 50%;
+        opacity: 1;
+    }
+}
+
+.icons-enterance {
+    -webkit-animation: icons-enterance 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+    animation: icons-enterance 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+}
+
+@-webkit-keyframes icons-enterance {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes icons-enterance {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
