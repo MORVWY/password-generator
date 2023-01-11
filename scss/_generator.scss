@@ -32,7 +32,6 @@
                 font-weight: 600;
                 width: 95%;
                 height: auto;
-                text-transform: uppercase;
             }
         }
 
@@ -53,10 +52,15 @@
                 font-weight: 500;
                 text-transform: uppercase;
 
-                span {
+                input {
                     color: $dark-color;
                     font-size: 1rem;
                     font-weight: 600;
+                    width: 10%;
+                    background-color: $main-bg-color;
+                    outline: none;
+                    border: none;
+                    font-family: 'Raleway', sans-serif;
                 }
             }
 

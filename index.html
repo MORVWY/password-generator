@@ -25,13 +25,13 @@
             <h2 class="generator__header headers-enterance">Generate</h2>
 
             <div class="generator-password item-enterance">
-                <div class="generator-password__item">click generate</div>
+                <div class="generator-password__item">CLICK GENERATE</div>
                 <img class="copy" src="icons/copy.svg" alt="copy icon" title="Copy password">
                 <img class="save" src="icons/save.svg" alt="save icon" title="Save password">
             </div>
 
             <div class="generator-length item-enterance" data-min="4" data-max="16">
-                <div class="generator-length__title">length: <span></span></div>
+                <div class="generator-length__title">length: <input></input></div>
                 <input class="generator-length__slider" type="range" id="slider" min="4" max="16" value="10">
             </div>
 
@@ -41,7 +41,7 @@
 
                 <div class="generator-settings__uppercase settings">
                     <div>Include Uppercase</div>
-                    <input type="checkbox" id="uppercase">
+                    <input type="checkbox" id="uppercase" checked>
                     <div class="toggle">
                         <label for="uppercase" class="toggle__item uppercase"></label>
                     </div>
@@ -49,7 +49,7 @@
 
                 <div class="generator-settings__lowercase settings">
                     <div>Include Lowercase</div>
-                    <input type="checkbox" id="lowercase">
+                    <input type="checkbox" id="lowercase" checked>
                     <div class="toggle">
                         <label for="lowercase" class="toggle__item lowercase"></label>
                     </div>
@@ -57,7 +57,7 @@
 
                 <div class="generator-settings__numbers settings">
                     <div>Include Numbers</div>
-                    <input type="checkbox" id="number">
+                    <input type="checkbox" id="number" checked>
                     <div class="toggle">
                         <label for="number" class="toggle__item number"></label>
                     </div>
@@ -74,7 +74,7 @@
             </div>
 
             <div class="generator-level item-enterance">
-                <div class="generator-level__line"></div>
+                <div class="generator-level__line"><span></span></div>
                 <div class="generator-level__status headers-enterance">Status: <span>strong</span></div>
             </div>
 
@@ -102,7 +102,7 @@
                 <div class="passwords__recent-item">Password examplePassword example</div>
 
                 <div class="passwords__recent-icons">
-                    <img class="copy" src="icons/copy.svg" alt="copy icon" title="Copy password">
+                    <img class="copy copy-saved" src="icons/copy.svg" alt="copy icon" title="Copy password">
                     <img class="delete-item" src="icons/delete/delete-item.svg" alt="delete icon"
                         title="Delete password">
                 </div>

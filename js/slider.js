@@ -1,13 +1,13 @@
 function onSliderChange() {
     const slider = document.querySelector("#slider");
-    const output = document.querySelector(".generator-length__title span");
+    const output = document.querySelector(".generator-length__title input");
 
     const sliderValue = slider.value;
 
-    output.innerHTML = sliderValue;
+    output.value = sliderValue;
 
     slider.oninput = function () {
-        output.innerHTML = this.value;
+        output.value = this.value;
     };
 
     function handleInputChange(e) {
