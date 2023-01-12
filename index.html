@@ -18,6 +18,8 @@
         <h1 class="header__logo text-in">Password generator</h1>
     </header>
 
+    <div class="alerts"></div>
+
     <main class="cards">
 
         <section class="generator box-enterance">
@@ -25,7 +27,7 @@
             <h2 class="generator__header headers-enterance">Generate</h2>
 
             <div class="generator-password item-enterance">
-                <div class="generator-password__item">CLICK GENERATE</div>
+                <input type="text" class="generator-password__item" placeholder="CLICK GENERATE" readonly></input>
                 <img class="copy" src="icons/copy.svg" alt="copy icon" title="Copy password">
                 <img class="save" src="icons/save.svg" alt="save icon" title="Save password">
             </div>
@@ -73,11 +75,6 @@
 
             </div>
 
-            <div class="generator-level item-enterance">
-                <div class="generator-level__line"><span></span></div>
-                <div class="generator-level__status headers-enterance">Status: <span>strong</span></div>
-            </div>
-
             <button class="generator__button item-enterance" id="generate"><span>Generate Password</span></button>
 
         </section>
@@ -86,31 +83,20 @@
             <h2 class="passwords__header headers-enterance">Password history</h2>
 
             <div class="passwords-icons">
-                <img class="delete-picked icons-enterance" src="icons/delete/delete-picked.svg" alt="delete icon"
-                    title="Delete picked">
                 <img class="delete-all icons-enterance" src="icons/delete/delete-all.svg" alt="delete icon"
                     title="Delete all">
             </div>
 
 
-            <div class="passwords__recent item-enterance">
-                <label>
-                    <input type="checkbox" class="passwords__recent-checkbox">
-                    <div><span></span></div>
-                </label>
-
-                <div class="passwords__recent-item">Password examplePassword example</div>
-
-                <div class="passwords__recent-icons">
-                    <img class="copy copy-saved" src="icons/copy.svg" alt="copy icon" title="Copy password">
-                    <img class="delete-item" src="icons/delete/delete-item.svg" alt="delete icon"
-                        title="Delete password">
-                </div>
-            </div>
+            <div class="passwords-list"></div>
 
         </section>
 
     </main>
+
+    <footer class="footer">
+        <div class="footer__item headers-enterance">Created by <a href="google.com" class="footer__item-link" target="_blank">MORVWY</a></div>
+    </footer>
 
     <script type="module" src="js/app.js"></script>
 </body>

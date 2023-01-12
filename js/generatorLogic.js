@@ -2,6 +2,13 @@ import {
     generateBtn
 } from './buttons.js';
 
+import {
+    getRandomUpper,
+    getRandomLower,
+    getRandomNumber,
+    getRandomSymbol
+} from './randomValues.js';
+
 export function generatorLogic() {
 
     // DOM ELEMENTS
@@ -11,9 +18,7 @@ export function generatorLogic() {
         upperCaseEl = body.querySelector('#uppercase'),
         lowerCaseEl = body.querySelector('#lowercase'),
         numberEl = body.querySelector('#number'),
-        symbolEl = body.querySelector('#symbol'),
-        statusLine = body.querySelector('.generator-level__line span'),
-        statusWord = body.querySelector('.generator-level__status span');
+        symbolEl = body.querySelector('#symbol');
 
     // MAIN OBJ WITH ELEMENTS
     const randomFunc = {
@@ -32,7 +37,7 @@ export function generatorLogic() {
         const hasNumber = numberEl.checked;
         const hasSymbol = symbolEl.checked;
 
-        password.innerText = generatePassword(hasUpper, hasLower, hasNumber, hasSymbol, length);
+        password.value = generatePassword(hasUpper, hasLower, hasNumber, hasSymbol, length);
     });
 
     // GENERATE PASSWORD FUNCTION
@@ -40,14 +45,18 @@ export function generatorLogic() {
         let generatedPassword = '';
 
         const typesCount = upper + lower + number + symbol;
-        const typesArr = [{upper}, {lower}, {number}, {symbol}].filter(item => Object.values(item)[0]);
+        const typesArr = [{
+            upper
+        }, {
+            lower
+        }, {
+            number
+        }, {
+            symbol
+        }].filter(item => Object.values(item)[0]);
 
         if (typesCount === 0) {
             return console.log('Chose one of the settigns');
-        }
-
-        if (typesCount === 1 || typesCount === 2) {
-            statusLine.classList.add('weak');
         }
 
         for (let i = 0; i < length; i++) {
@@ -63,39 +72,21 @@ export function generatorLogic() {
             .join('');
     }
 
-    function disableOnlyCheckbox(){
+    function disableOnlyCheckbox() {
         let totalChecked = [upperCaseEl, lowerCaseEl, numberEl, symbolEl].filter(el => el.checked);
 
         totalChecked.forEach(el => {
-            if(totalChecked.length == 1){
+            if (totalChecked.length == 1) {
                 el.disabled = true;
-            }else{
+            } else {
                 el.disabled = false;
             }
         });
     }
-    
+
     [upperCaseEl, lowerCaseEl, numberEl, symbolEl].forEach(el => {
         el.addEventListener('click', () => {
             disableOnlyCheckbox();
         });
     });
-
-    // GET RANDOM VALUES LOGIC
-    function getRandomUpper() {
-        return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-    }
-
-    function getRandomLower() {
-        return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-    }
-
-    function getRandomNumber() {
-        return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-    }
-
-    function getRandomSymbol() {
-        const symbols = '~!@#$%^&*()_+{}":?><;.,';
-        return symbols[Math.floor(Math.random() * symbols.length)];
-    }
 }

@@ -6,13 +6,13 @@
     justify-content: center;
     align-items: center;
 
-    .delete-all,
-    .delete-picked {
+    .delete-all {
         opacity: .5;
         width: 35px;
         height: 35px;
         cursor: pointer;
         transition: .5s ease-in-out;
+        display: none;
 
         &:hover {
             opacity: 1;
@@ -40,7 +40,7 @@
     }
 }
 
-.delete-item, .copy, .save, .delete-all, .delete-picked {
+.delete-item, .copy, .save, .delete-all {
     position: relative;
 
     &:active {
@@ -56,4 +56,8 @@
         font-size: 140%;
         width: 60px;
     }
+}
+
+.show-deleteAll {
+    display: block !important;
 }

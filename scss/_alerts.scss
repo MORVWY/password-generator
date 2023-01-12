@@ -1,0 +1,24 @@
+.alerts {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    right: -75px;
+    top: 3%;
+    color: $main-bg-color;
+    background-color: $main-bg-color;
+    border-radius: 10px;
+    box-shadow: $header-shadow;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    user-select: none;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}

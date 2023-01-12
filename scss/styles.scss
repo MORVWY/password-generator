@@ -8,7 +8,8 @@
 @import 'slider';
 @import 'button';
 @import 'icons';
-@import 'level';
+@import 'footer';
+@import 'alerts';
 
 * {
     margin: 0;
@@ -26,6 +27,7 @@ body {
     height: 100%;
     background-color: $main-bg-color;
     font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
 }
 
 ol,
