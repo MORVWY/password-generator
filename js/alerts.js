@@ -1,8 +1,7 @@
-const alerts = document.querySelector('.alerts');
-
 function alertFunction(content, color) {
+    const alerts = document.querySelector('.alerts');
 
-    alerts.innerHTML = content;
+    alerts.innerText = content;
     alerts.style.backgroundColor = color;
     alerts.classList.add('display-block');
     alerts.classList.add('slide-left');

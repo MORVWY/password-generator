@@ -1,0 +1,162 @@
+@media (max-width: 1199.98px) {
+    .header {
+        &__logo {
+            font-size: 2.5rem;
+        }
+    }
+
+    .cards {
+        .generator {
+            &__header {
+                font-size: 1.3rem;
+            }
+
+            &-password {
+                &__item {
+                    font-size: 1.1rem;
+                }
+            }
+
+            &-settings {
+
+                & .settings {
+                    div {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            &__button {
+                span {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        .passwords {
+            &__header {
+                font-size: 1.3rem;
+            }
+
+            &__recent {
+                &-item {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .header {
+        &__logo {
+            font-size: 2rem;
+        }
+    }
+
+    .cards {
+        flex-direction: column;
+
+        .generator {
+            width: 65%;
+            margin: 0 auto;
+        }
+
+        .passwords {
+            margin-top: 50px;
+            padding: 25px;
+        }
+    }
+}
+
+
+@media (max-width: 767.98px) {
+    .header {
+        &__logo {
+            font-size: 1.7rem;
+        }
+    }
+
+    .alerts {
+        top: 10%;
+    }
+
+    .cards {
+        flex-direction: column;
+        margin-top: 100px;
+
+        .generator {
+            width: 95%;
+            margin: 0 auto;
+
+            &__header {
+                font-size: 1.2rem;
+            }
+        }
+
+        .passwords {
+            margin-top: 50px;
+            padding: 25px;
+
+            &__header {
+                font-size: 1.2rem;
+            }
+
+            &-list {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .header {
+        &__logo {
+            font-size: 1.3rem;
+        }
+    }
+
+    .cards {
+        flex-direction: column;
+
+        .generator {
+            width: 95%;
+            margin: 0 auto;
+
+            &__header {
+                font-size: 1rem;
+            }
+
+            &-password {
+                &__item {
+                    font-size: .9rem;
+                }
+            }
+        }
+
+        .passwords {
+            margin-top: 50px;
+            padding: 25px;
+
+            &__header {
+                font-size: 1rem;
+            }
+
+            &-list {
+                flex-direction: column;
+            }
+
+            &__recent {
+                &-item {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+
+    .footer {
+        &__item {
+            font-size: .9rem;
+        }
+    }
+}

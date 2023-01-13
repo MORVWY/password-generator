@@ -1,0 +1,182 @@
+.cards {
+    .generator {
+        background-color: $dark-color;
+        border-radius: 10px;
+        box-shadow: $cards-shadow;
+        flex-basis: 30%;
+        padding: 15px;
+
+        &__header {
+            color: $main-bg-color;
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        &-password {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            background-color: $main-bg-color;
+            border-radius: 5px;
+            margin-top: 20px;
+            padding: 15px;
+
+            &__item {
+                color: $dark-color;
+                width: 95%;
+                height: auto;
+                background-color: $main-bg-color;
+                border: none;
+                font-size: 1.5rem;
+                font-weight: 600;
+                font-family: 'Raleway', sans-serif;
+                text-align: center;
+                outline: none;
+            }
+        }
+
+        &-length {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            background-color: $main-bg-color;
+            border-radius: 5px;
+            margin-top: 20px;
+            padding: 15px;
+
+            &__title {
+                color: $dark-color;
+                font-size: .75rem;
+                font-weight: 500;
+                text-align: left;
+                text-transform: uppercase;
+
+                input {
+                    color: $dark-color;
+                    background-color: $main-bg-color;
+                    width: 10%;
+                    height: auto;
+                    border: none;
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    outline: none;
+                }
+            }
+
+            &__slider {
+                display: flex;
+                align-items: center;
+                position: relative;
+                width: 80%;
+                height: auto;
+            }
+
+            &::before,
+            &::after {
+                color: $dark-color;
+                position: absolute;
+                font-size: 1rem;
+                font-weight: 600;
+            }
+
+            &::before {
+                content: attr(data-min);
+                top: 55%;
+            }
+
+            &::after {
+                content: attr(data-max);
+                right: 10px;
+                top: 55%;
+            }
+        }
+
+        &-settings {
+            background-color: $main-bg-color;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 20px;
+            padding: 15px;
+
+            &__title {
+                color: $dark-color;
+                font-size: .75rem;
+                font-weight: 500;
+                text-align: left;
+                text-transform: uppercase;
+            }
+
+            .settings {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                margin-top: 15px;
+
+                div {
+                    font-size: 1rem;
+                }
+
+                & input[type="checkbox"] {
+                    display: none;
+                }
+
+                & input[type="checkbox"]:checked+.toggle {
+                    background-color: $cyan-color;
+                }
+
+                .toggle {
+                    background-color: $dark-color;
+                    position: absolute;
+                    width: 15%;
+                    height: 25px;
+                    top: 0;
+                    right: 0;
+                    border-radius: 5px;
+                    -webkit-transition: all 300ms ease;
+                    transition: all 300ms ease;
+
+                    &__item {
+                        position: absolute;
+                        cursor: pointer;
+                        -webkit-transition: all 300ms ease;
+                        transition: all 300ms ease;
+                    }
+                }
+
+                & input[type="checkbox"]:checked+.toggle {
+                    background-color: $dark-color;
+                }
+
+                & input[type="checkbox"]:checked+.toggle .toggle__item {
+                    background-color: $cyan-color;
+                    left: calc(100% - 19px - 3px);
+                }
+
+                & .toggle {
+                    background-color: $dark-color;
+                    box-shadow: $toggle-shadow;
+                    border-radius: 5px;
+                    -webkit-box-shadow: $toggle-shadow;
+                }
+
+                & .toggle__item {
+                    background-color: #e6e6e6;
+                    width: calc(25px - 6px);
+                    height: calc(25px - 6px);
+                    border-radius: 5px;
+                    left: 3px;
+                    top: 3px;
+                }
+            }
+        }
+    }
+}

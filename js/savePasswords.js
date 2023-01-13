@@ -25,7 +25,7 @@ saveBtn.addEventListener('click', () => {
 
     if (passwordValue.trim() == '') {
         alertFunction('Generate password', '#FC5185');
-    } else if (passwordDB.length === 5) {
+    } else if (passwordDB.length === 10) {
         alertFunction("Can't save more", '#FC5185');
     } else if (!checkForDublicate(passwordValue, passwordDB)) {
         alertFunction("Already saved", '#FC5185');
@@ -36,7 +36,7 @@ saveBtn.addEventListener('click', () => {
         }
         passwordDB.push(passwordData);
         displayPasswords(passwordDB);
-        showDeleteAllBtn();
+        showDeleteAllBtn(passwordDB);
     }
 
     localStorage.setItem('passwords', JSON.stringify(passwordDB));

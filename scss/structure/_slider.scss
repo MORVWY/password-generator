@@ -1,0 +1,81 @@
+input[type="range"] {
+    height: 13px;
+    -webkit-appearance: none;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 80%;
+    background-color: $dark-color;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: linear-gradient($cyan-color, $cyan-color);
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+/* Input Thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    background: $cyan-color;
+    cursor: ew-resize;
+    box-shadow: $checked-shadow;
+    transition: background .3s ease-in-out;
+}
+
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: $cyan-color;
+    cursor: ew-resize;
+    box-shadow: $checked-shadow;
+    transition: background .3s ease-in-out;
+}
+
+input[type="range"]::-ms-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: $cyan-color;
+    cursor: ew-resize;
+    box-shadow: $checked-shadow;
+    transition: background .3s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: $cyan-color;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    background: $cyan-color;
+}
+
+input[type="range"]::-ms-thumb:hover {
+    background: $cyan-color;
+}
+
+/* Input Track */
+input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+input[type=range]::-moz-range-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+input[type="range"]::-ms-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}

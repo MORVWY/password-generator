@@ -1,4 +1,6 @@
-import {displayPasswords} from './savePasswords.js'
+import {
+    displayPasswords
+} from './savePasswords.js'
 
 export let passwordDB = [];
 

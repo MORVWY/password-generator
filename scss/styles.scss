@@ -1,20 +1,23 @@
-@import 'fonts';
-@import 'variables';
-@import 'header';
-@import 'animations';
-@import 'generator';
-@import 'passwords';
-@import 'cards';
-@import 'slider';
-@import 'button';
-@import 'icons';
-@import 'footer';
-@import 'alerts';
+@import './main/variables';
+@import './main/fonts';
+@import './main/animations';
+@import './main/button';
+@import './main/icons';
+@import './main/alerts';
+
+@import './structure/header';
+@import './structure/generator';
+@import './structure/slider';
+@import './structure/passwords';
+@import './structure/cards';
+@import './structure/footer';
+
+@import './main/media';
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -22,11 +25,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 15px;
+    background-color: $main-bg-color;
     width: 100%;
     height: 100%;
-    background-color: $main-bg-color;
     font-family: 'Raleway', sans-serif;
+    padding: 15px;
     overflow-x: hidden;
 }
 

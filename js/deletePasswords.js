@@ -7,7 +7,8 @@ import {
 } from './savePasswords.js';
 
 import {
-    showDeleteAllBtn
+    showDeleteAllBtn,
+    deleteAllBtn
 } from './buttons.js';
 
 import {
@@ -28,15 +29,13 @@ function deleteAllSavedPasswords(db) {
     db.splice(0, db.length);
 }
 
-const deleteAllBtn = document.querySelector('.delete-all');
-
 deleteAllBtn.addEventListener('click', () => {
     if (passwordDB.length === 0) {
         alertFunction("Nothing to delete", '#FC5185');
     } else {
         deleteAllSavedPasswords(passwordDB);
         displayPasswords(passwordDB);
-        showDeleteAllBtn();
+        showDeleteAllBtn(passwordDB);
 
         alertFunction('Delete successful', '#38E54D');
     }

@@ -1,0 +1,10 @@
+.header {
+    &__logo {
+        color: $dark-color;
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-shadow: $header-shadow;
+        user-select: none;
+    }
+}

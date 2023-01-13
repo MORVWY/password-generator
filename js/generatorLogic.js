@@ -55,10 +55,6 @@ export function generatorLogic() {
             symbol
         }].filter(item => Object.values(item)[0]);
 
-        if (typesCount === 0) {
-            return console.log('Chose one of the settigns');
-        }
-
         for (let i = 0; i < length; i++) {
             typesArr.forEach(type => {
                 const funcName = Object.keys(type)[0];
@@ -68,8 +64,7 @@ export function generatorLogic() {
         }
 
         return generatedPassword.slice(0, length)
-            .split('').sort(() => Math.random() - 0.5)
-            .join('');
+            .split('').sort(() => Math.random() - 0.5).join('');
     }
 
     function disableOnlyCheckbox() {

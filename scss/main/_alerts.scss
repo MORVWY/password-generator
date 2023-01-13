@@ -1,12 +1,12 @@
 .alerts {
-    position: absolute;
     display: none;
     align-items: center;
     justify-content: center;
+    background-color: $main-bg-color;
+    color: $main-bg-color;
+    position: absolute;
     right: -75px;
     top: 3%;
-    color: $main-bg-color;
-    background-color: $main-bg-color;
     border-radius: 10px;
     box-shadow: $header-shadow;
     font-size: 1rem;

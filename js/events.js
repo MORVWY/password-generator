@@ -29,7 +29,7 @@ export function itemEvents() {
     
             deleteSavedPasswords(uniqueId, passwordDB);
             displayPasswords(passwordDB);
-            showDeleteAllBtn();
+            showDeleteAllBtn(passwordDB);
         }
 
         if (target.classList.contains('copy-saved')) {
